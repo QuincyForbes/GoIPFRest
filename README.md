@@ -28,6 +28,10 @@ Once the server is running, you can interact with it using any HTTP client. Here
 - `GET /metadata/{cid}`: Returns the metadata item with the specified CID.
 
 
+## Results
+![image](https://github.com/QuincyForbes/GoIPFRest/assets/74159902/1886335e-bb93-410e-83d9-aa4f9989209a)
+
+![image](https://github.com/QuincyForbes/GoIPFRest/assets/74159902/061693d6-2dd8-4895-a707-995f5ffdce9c)
 ## Contributing
 
 If you'd like to contribute to this project, please fork the repository and submit a pull request.
