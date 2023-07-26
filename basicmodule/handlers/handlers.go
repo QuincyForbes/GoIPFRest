@@ -38,16 +38,16 @@ func GetAllItems(c *gin.Context) {
 		return
 	}
 
-	// Unmarshal the response items into tokens.
-	var tokens []*models.Cid
-	err = attributevalue.UnmarshalListOfMaps(resp.Items, &tokens)
+	// Unmarshal the response items into cids.
+	var cids []*models.Cid
+	err = attributevalue.UnmarshalListOfMaps(resp.Items, &cids)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": fmt.Sprintf("Error unmarshalling DynamoDB items: %v", err)})
 		return
 	}
 
 	// Send the result as a JSON response.
-	c.JSON(http.StatusOK, tokens)
+	c.JSON(http.StatusOK, cids)
 }
 
 // GetItemByCID handles the request to fetch a specific item by its CID from the DynamoDB table.
