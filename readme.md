@@ -1,4 +1,4 @@
-# Project Name
+# GoIPFRest
 
 This project is a REST API that interacts with a DynamoDB table to store and retrieve metadata about content-addressed data.
 
