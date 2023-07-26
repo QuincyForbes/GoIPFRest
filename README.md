@@ -1,6 +1,6 @@
 # IPFS Metadata RestAPI
 
-This project is a REST API that interacts with a DynamoDB table to retrieve metadata about content-addressed data.
+This project is a REST API that interacts with a DynamoDB table to retrieve metadata.
 
 ## Getting Started
 
