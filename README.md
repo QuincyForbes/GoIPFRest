@@ -30,14 +30,6 @@ Once the server is running, you can interact with it using any HTTP client. Here
 - `GET /metadata/{cid}`: Returns the metadata item with the specified CID.
 - `POST /metadata`: Adds a new metadata item to the DynamoDB table.
 
-## Running Tests
-
-To run the unit tests for this project, run:
-go test ./...
-
-vbnet
-Copy code
-
 ## Contributing
 
 If you'd like to contribute to this project, please fork the repository and submit a pull request.
