@@ -1,6 +1,6 @@
-# Project Name
+# IPFS Metadata RestAPI
 
-This project is a REST API that interacts with a DynamoDB table to store and retrieve metadata about content-addressed data.
+This project is a REST API that interacts with a DynamoDB table to retrieve metadata.
 
 ## Getting Started
 
@@ -28,20 +28,9 @@ Once the server is running, you can interact with it using any HTTP client. Here
 
 - `GET /metadata`: Returns a list of all metadata items in the DynamoDB table.
 - `GET /metadata/{cid}`: Returns the metadata item with the specified CID.
-- `POST /metadata`: Adds a new metadata item to the DynamoDB table.
 
-## Running Tests
-
-To run the unit tests for this project, run:
-go test ./...
-
-vbnet
-Copy code
 
 ## Contributing
 
 If you'd like to contribute to this project, please fork the repository and submit a pull request.
 
-## License
-
-This project is licensed under the MIT License - see the `LICENSE` file for details.
