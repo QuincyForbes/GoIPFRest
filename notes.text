@@ -1,0 +1,51 @@
+GetAllItems function:
+This function fetches all items from a DynamoDB table named MetadataTable.
+
+Load AWS SDK Configuration:
+The AWS SDK requires a configuration to interact with AWS services. This configuration is loaded with a default setup, targeting the us-east-1 region.
+If there's an error loading this configuration, a response is returned with an internal server error (HTTP 500) status.
+
+DynamoDB Service Client:
+Using the loaded configuration, a new DynamoDB service client is instantiated.
+
+Scan Operation:
+The function prepares an input for a Scan operation, targeting the MetadataTable. A scan operation in DynamoDB fetches all items from the specified table.
+If there's an error executing this scan, an error response is returned.
+
+Unmarshal DynamoDB Items:
+DynamoDB items returned from the scan are then unmarshaled into Go structs (cids of type models.Cid).
+If there's an error in this unmarshaling process, an error response is returned.
+
+Respond with Cids:
+Finally, the list of cids is returned as a JSON response with an OK (HTTP 200) status.
+GetItemByCID function
+This function fetches a specific item identified by its CID from the DynamoDB table named MetadataTable.
+
+Extract CID:
+The CID (Content Identifier) is extracted from the URL route parameter. It identifies the specific item the client wants to retrieve.
+
+Load AWS SDK Configuration:
+Similar to the GetAllItems function, it loads the AWS SDK configuration.
+
+DynamoDB Service Client:
+
+Prepare DynamoDB Key:
+To fetch a specific item from DynamoDB, you need to provide the primary key of that item. In this case, the CID is used as the primary key.
+The CID is marshaled into a format suitable for DynamoDB. If there's an error in this process, an error response is returned.
+
+GetItem Operation:
+With the prepared key, the function sets up an input for a GetItem operation targeting the MetadataTable. This operation fetches the specific item from the table.
+If there's an error executing this operation, an error response is returned.
+
+Unmarshal DynamoDB Item:
+The DynamoDB item is then unmarshaled into a Go struct (metadata of type models.Metadata).
+If there's an error in this unmarshaling process, an error response is returned.
+
+Respond with Metadata:
+The metadata is returned as a JSON response with an OK (HTTP 200) status.
+
+In Conclusion:
+The GetAllItems function fetches all items from a DynamoDB table.
+The GetItemByCID function fetches a specific item based on the provided CID from the same DynamoDB table.
+Errors during any operation result in an immediate response with an error status and message, preventing further operations.
+Successful operations conclude with sending the relevant data back to the client as JSON.
