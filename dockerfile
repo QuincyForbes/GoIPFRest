@@ -19,7 +19,6 @@ FROM alpine:latest
 # Expose port 8080 for the Go application
 EXPOSE 8080
 
-
 # Set necessary environment variables for better performance
 ENV GIN_MODE=release
 
