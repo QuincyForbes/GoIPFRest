@@ -16,8 +16,7 @@ You'll also need to have an AWS account set up with the appropriate permissions 
 1. Clone the repository to your local machine.
 2. Run `go mod download` to download the project dependencies.
 3. Set up your AWS credentials by running `aws configure`.
-4. Create a DynamoDB table by running:
-   `aws dynamodb create-table --table-name MetadataTable --attribute-definitions AttributeName=Cid,AttributeType=S --key-schema AttributeName=Cid,KeyType=HASH --billing-mode PAY_PER_REQUEST --region us-east-1`
+4. Create a DynamoDB table or update the code to support yours.
 5. Start the server by running `go run main.go` or building the dockerfile.
 
 ## Usage
