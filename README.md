@@ -2,14 +2,18 @@
 
 This project is a REST API that interacts with a DynamoDB table to retrieve metadata.
 
-## Getting Started
+## Features
 
-To get started with this project, you'll need to have the following installed on your machine:
+- **GET Metadata**: Get the metadata of an IPFS CID via GET requests.
+- **GET CIDs**: Get all of the CID inside the database via GET requests.
 
-- **Go**
-- **AWS CLI**
+- 
+## Prerequisites
 
-You'll also need to have an AWS account set up with the appropriate permissions to create and manage DynamoDB tables.
+- **Go**: This is a Go project, and you would need Go installed to run or build it.
+- **AWS CLI & AWS SDK**: The AWS CLI needs to be set up with appropriate permissions. The program also utilizes the AWS SDK for Go v2.
+- **DynamoDB**: Configuring the DynamoDB table with an appropriate name is essential. Please make sure to update the table name in the code accordingly.
+
 
 ## Installation
 
