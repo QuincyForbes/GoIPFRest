@@ -7,7 +7,6 @@ This project is a REST API that interacts with a DynamoDB table to retrieve meta
 - **GET Metadata**: Get the metadata of an IPFS CID via GET requests.
 - **GET CIDs**: Get all of the CID inside the database via GET requests.
 
-- 
 ## Prerequisites
 
 - **Go**: This is a Go project, and you would need Go installed to run or build it.
