@@ -28,7 +28,7 @@ Once the server is running, you can interact with it using any HTTP client. Here
 
 - `GET /metadata`: Returns a list of all metadata items in the DynamoDB table.
 - `GET /metadata/{cid}`: Returns the metadata item with the specified CID.
-- `POST /metadata`: Adds a new metadata item to the DynamoDB table.
+
 
 ## Contributing
 
